@@ -106,21 +106,25 @@ function Car(model, milesPerGallon) {
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby(name, age, favoriteToy) {
- this.name = name;
- this.age = age;
- this.favoriteToy = favoriteToy;
+  Person.call(this, name, age );
+  this.favoriteToy = favoriteToy;
 }
+
+Baby.prototype = Object.create(Person.prototype);
 
 Baby.prototype.play = function () {
   return `Playing with ${this.favoriteToy}`;
 }
 
 
+// const aBaby = new Baby('Carl', .5, "Mom's phone");
+
+
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
+  1. "this" can be be bound to the global "window" object, in which case it serves very little purpose because all parts of the program already have access to the methods found on the window object.
+  2. "this" can have an implicit binding. Implicitly bound "this" references parts of the object in which it is being used. This is the most common use-case. Implicitly bound "this" refers to the object found to the left of the dot.
   3. 
   4. 
 */
