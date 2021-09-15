@@ -125,8 +125,8 @@ Baby.prototype.play = function () {
   In your own words explain the four principles for the "this" keyword below:
   1. "this" can be be bound to the global "window" object, in which case it serves very little purpose because all parts of the program already have access to the methods found on the window object.
   2. "this" can have an implicit binding. Implicitly bound "this" references parts of the object in which it is being used. This is the most common use-case. Implicitly bound "this" refers to the object found to the left of the dot.
-  3. 
-  4. 
+  3. "this" can also have an explicit binding. Explicitly bound "this" occurs in the context of the methods .call, .apply and .bind.  Under these conditions,  "this" is being told to refer to something specific.
+  4. "this" has a new binding as well. With new binding, "this" set instructed to refer to a new object being constructed.
 */
 
 
